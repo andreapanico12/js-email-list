@@ -12,7 +12,12 @@ const mailsButton = document.getElementById('btn-gen');
 console.log(endpoint)
 
 generaEmail()
-
+mailsButton.addEventListener('mousedown', ()=>{
+  mailsButton.style.backgroundColor = 'blue'
+})
+mailsButton.addEventListener('mouseup', ()=>{
+  mailsButton.style.backgroundColor = 'brown'
+})
 mailsButton.addEventListener("click",function(){
   ulEmails.innerHTML='';
   counterMails = 0;

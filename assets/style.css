@@ -2,12 +2,46 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul{
+  list-style: none;
 }
 
 .container{
   margin: 20px auto;
   padding: 15px;
-  width: 600px;
+  width: 800px;
+  height: 800px;
   text-align: center;
-  border: 1px solid black;
+  border: 5px solid black;
+  background-color: lightgray;
+  
+}
+
+h1{
+  margin-bottom: 20px;
+  font-weight: 800;
+  font-size: 80px;
+  background-color: brown;
+  border-radius: 50%;
+}
+ul li{
+ font-size: 30px;
+ color: brown;
+ margin-top: 20px;
+ }
+
+#btn-gen{
+  font-size: 20px;
+  padding: 5px;
+  background-color: brown;
+  color: whitesmoke;
+  border-radius: 20px;
+}
+
+#btn-gen:hover{
+  opacity: 0.8;
+  cursor: pointer;
 }
