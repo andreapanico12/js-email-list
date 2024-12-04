@@ -20,6 +20,10 @@ ul{
   
 }
 
+.d-none{
+  display: none;
+}
+
 h1{
   margin-bottom: 20px;
   font-weight: 800;
@@ -27,6 +31,13 @@ h1{
   background-color: brown;
   border-radius: 50%;
 }
+
+#loading{
+  font-size: 20px;
+  font-weight: 800;
+  margin-top: 15px;
+}
+
 ul li{
  font-size: 30px;
  color: brown;

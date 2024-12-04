@@ -8,6 +8,7 @@ let counterMails = 0;
 
 const ulEmails = document.getElementById('mail-list');
 const mailsButton = document.getElementById('btn-gen');
+const loading = document.getElementById('loading');
 
 console.log(endpoint)
 
@@ -37,6 +38,9 @@ mailsButton.addEventListener("click",function(){
 
 // La funzione genera le 10 mail  necessarie per la soluzione dell'esercizio.
 function generaEmail(){
+
+  loading.classList.remove('d-none')
+
   axios.get(endpoint)
  .then(response =>{
   let email = response.data.response;
@@ -56,6 +60,7 @@ function generaEmail(){
   // Ogni elemento li va poi aggiunto al suo genitore ulMails
 
   if (counterMails === 10){
+    loading.classList.add('d-none');
     console.log(`Stampo tutte le mail:`, emails)
     emails.forEach(mail =>{
       const liMail = document.createElement('li');
@@ -70,5 +75,5 @@ function generaEmail(){
     generaEmail()
   }
  })
- 
+  .catch(error =>{console.log(error)}); 
 }
